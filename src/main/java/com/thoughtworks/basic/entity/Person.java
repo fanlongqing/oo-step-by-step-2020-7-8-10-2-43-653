@@ -3,6 +3,15 @@ package com.thoughtworks.basic.entity;
 public class Person {
     private String name;
     private String age;
+    private  String message;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     public Person(String name, String age) {
         this.name = name;

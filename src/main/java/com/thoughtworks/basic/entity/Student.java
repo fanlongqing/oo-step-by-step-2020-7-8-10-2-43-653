@@ -17,11 +17,11 @@ public class Student extends Person {
 
     }
 
-    public KClass getClassNumber() {
+    public KClass getKClass() {
         return kClass;
     }
 
-    public void setClassNumber(KClass classNumber) {
+    public void setKClass(KClass classNumber) {
         this.kClass = classNumber;
     }
 }
