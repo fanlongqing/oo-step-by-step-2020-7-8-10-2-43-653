@@ -64,9 +64,6 @@ public class ClassTest {
         student1.setKClass(myclass);
         student2.setKClass(myclass);
         student3.setKClass(myclass);
-
-
-
         //when
         List<Student> studentsResult = myclass.getStudents();
         //then
