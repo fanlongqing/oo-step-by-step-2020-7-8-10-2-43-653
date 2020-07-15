@@ -1,11 +1,27 @@
 package com.thoughtworks.basic.entity;
 
 public class Student extends Person {
-    private String classNumber;
+    private KClass kClass;
 
-    public String introduce(String name, String age,String classNumber) {
-        String person =super.introduce(name, age);
-        return person+" I am a Student of Class "+classNumber+"." ;
+    public Student(String name,String age) {
+        super(name, age);
+    }
+    public Student(String name, String age, KClass kClass) {
+        super(name, age);
+        this.kClass = kClass;
+    }
 
+    public String introduce() {
+        String person =super.introduce();
+        return person+" I am a Student of Class "+kClass.getClassNumber()+"." ;
+
+    }
+
+    public KClass getClassNumber() {
+        return kClass;
+    }
+
+    public void setClassNumber(KClass classNumber) {
+        this.kClass = classNumber;
     }
 }

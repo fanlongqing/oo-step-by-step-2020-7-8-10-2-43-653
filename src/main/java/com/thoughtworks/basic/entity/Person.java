@@ -4,6 +4,11 @@ public class Person {
     private String name;
     private String age;
 
+    public Person(String name, String age) {
+        this.name = name;
+        this.age = age;
+    }
+
     public String getName() {
         return name;
     }
@@ -20,8 +25,7 @@ public class Person {
         this.age = age;
     }
 
-    public String introduce(String name,String age){
-        String c= "test";
+    public String introduce(){
         return "My name is " +name+". I am "+ age+" years old." ;
 
     }

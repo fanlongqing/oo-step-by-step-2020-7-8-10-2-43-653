@@ -1,9 +1,13 @@
 package com.thoughtworks.basic;
 
+import com.thoughtworks.basic.entity.KClass;
 import com.thoughtworks.basic.entity.Person;
 import com.thoughtworks.basic.entity.Student;
 import com.thoughtworks.basic.entity.Teacher;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -11,10 +15,10 @@ public class ClassTest {
     @Test
     public void person_test() {
         //given
-        Person person=new Person();
+        Person person=new Person("Tome","21");
 
         //when
-        String actual =   person.introduce("Tome","21");
+        String actual =   person.introduce();
 
         //then
         assertEquals(actual,"My name is Tome. I am 21 years old.");
@@ -22,11 +26,11 @@ public class ClassTest {
     @Test
     public void student_test() {
         //given
-        Student student=new Student();
-
+        List<Student> students=new ArrayList<>();
+        KClass kClass=new KClass("2",students);
+        Student student=new Student("Tom","21",kClass);
         //when
-        String actual =student.introduce("Tom","21","2");
-
+        String actual =student.introduce();
         //then
         assertEquals(actual,"My name is Tom. I am 21 years old. I am a Student of Class 2.");
     }
@@ -34,10 +38,10 @@ public class ClassTest {
     @Test
     public void teacher_test() {
         //given
-        Teacher teacher=new Teacher();
+        Teacher teacher=new Teacher("Matt","30","Teacher");
 
         //when
-        String actual =teacher.introduce("Matt","30","Teacher");
+        String actual =teacher.introduce();
 
         //then
         assertEquals(actual,"My name is Matt. I am 30 years old. I am a Teacher.");
